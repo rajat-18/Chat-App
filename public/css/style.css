@@ -1,0 +1,371 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url("../images/background.jpg");
+  font-family: "Odibee Sans", cursive;
+  background-size: cover;
+  font-size: 125%;
+  font-weight: 100;
+  font-stretch: extra-expanded;
+}
+
+.chat-main {
+  font-size: 150%;
+}
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: black;
+  height: 10vh;
+  width: 100%;
+}
+.navlist {
+  padding: 20px 0px 0px;
+  display: flex;
+  width: 100%;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+}
+.navlist li a {
+  font-family: "Odibee Sans", cursive;
+  font-size: 150%;
+}
+
+.leftnav {
+  display: flex;
+  width: 50%;
+  flex-direction: row;
+}
+.rightnav {
+  padding: 5px 10px;
+  width: 50%;
+  background-color: rgb(0, 0, 0);
+  font-family: "Odibee Sans", cursive;
+  font-size: 150%;
+  align-items: center;
+}
+
+.navbar a {
+  text-decoration: none;
+}
+.stories {
+  border-radius: 50px;
+  height: 9vh;
+  font-family: "Odibee Sans", cursive;
+  width: 150px;
+  font-size: 100%;
+  background-color: rgb(0, 0, 0);
+  border: 4px solid white;
+  color: white;
+}
+.stories:hover {
+  transition: all 0.5s ease 0s;
+  background-color: rgb(255, 255, 255);
+  color: black;
+}
+.navbar a:hover {
+  transition: all 0.5s ease 0s;
+  color: rgb(140, 192, 235);
+}
+
+.wrapper {
+  height: 100vh;
+  background-image: url("background.jpg");
+  background-size: cover;
+}
+
+.loginbox h1 {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  padding: 0px 0px 10px;
+  text-align: center;
+  font-size: 300%;
+}
+
+.chat-form {
+  padding-left: 30px;
+  height: 400px;
+  width: 50vw;
+  background-color: black;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  color: white;
+  font-family: "Odibee Sans", cursive;
+  font-size: 150%;
+  text-align: left;
+  border-radius: 20px;
+}
+
+.msg {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  left: 80%;
+  bottom: 50%;
+  transform: translate(-75px, 50px);
+  border-color: white;
+}
+
+@media only screen and (max-width: 700px) {
+  .msg {
+    visibility: hidden;
+  }
+}
+
+.chat-form h1 {
+  color: white;
+  text-align: center;
+  font-size: 150%;
+}
+
+.chat-form p {
+  padding: 5px 0px 5px;
+}
+.select {
+  width: 50%;
+  margin-bottom: 10px;
+  font-family: "Odibee Sans", cursive;
+  font-size: 100%;
+  background-color: black;
+  color: white;
+}
+
+.chat-form input {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  color: white;
+  border-bottom: 1px solid white;
+  padding-bottom: 10px;
+}
+.chat-btn {
+  width: 250px;
+  border-radius: 10px;
+  background-color: rgb(0, 0, 0);
+  font-family: "Odibee Sans", cursive;
+  border: 2px solid white;
+  color: white;
+  font-size: 150%;
+  margin-top: 10px;
+  height: 50px;
+}
+
+@media only screen and (max-width: 550px) {
+  .chat-btn {
+    width: 120px;
+    font-size: 100%;
+    height: 50px;
+  }
+}
+
+.chat-btn:hover {
+  transition: all 0.5s ease 0s;
+  background-color: rgb(244, 245, 244);
+  color: rgb(0, 0, 0);
+}
+
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
+:root {
+  --dark-color-a: #000000;
+  --dark-color-b: #a80b0b;
+  --light-color: #ffffff;
+  --success-color: #5cb85c;
+  --error-color: #d9534f;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  cursor: pointer;
+  padding: 5px 15px;
+  background: rgb(48, 3, 250);
+  border-radius: 10px;
+  color: white;
+  border: 2px solid white;
+  border-color: rgb(6, 78, 126);
+  font-size: 17px;
+}
+.btn:hover {
+  background: rgb(30, 255, 0);
+  color: black;
+  transition: all 0.5s ease 0s;
+  font-size: 125%;
+}
+
+/* Chat Page */
+
+.chat-container {
+  border-radius: 5px;
+  max-width: 1100px;
+  background: #fff;
+  margin: 30px auto;
+  overflow: hidden;
+}
+
+.chat-header {
+  background: var(--dark-color-a);
+  color: #fff;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.chat-main {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+.chat-sidebar {
+  background: var(--dark-color-b);
+  color: #fff;
+  padding: 20px 20px 60px;
+  overflow-y: scroll;
+}
+
+.chat-sidebar h2 {
+  font-size: 20px;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.chat-sidebar h3 {
+  margin-bottom: 15px;
+  font-size: 100%;
+}
+
+.chat-sidebar ul li {
+  padding: 10px 0;
+}
+
+.chat-messages {
+  padding: 30px;
+  max-height: 500px;
+  overflow-y: scroll;
+}
+
+.chat-messages .message {
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  overflow-wrap: break-word;
+  background-color: beige;
+}
+
+.chat-messages .message .meta {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--dark-color-b);
+  opacity: 0.7;
+  margin-bottom: 7px;
+}
+
+.chat-messages .message .meta span {
+  color: #777;
+}
+
+.chat-form-container {
+  padding: 20px 30px;
+  background-color: var(--dark-color-a);
+}
+
+.chat-form-container form {
+  display: flex;
+}
+
+.chat-form-container input[type="text"] {
+  font-size: 16px;
+  padding: 5px;
+  height: 40px;
+  flex: 1;
+}
+#msg {
+  background-color: black;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid white;
+  color: white;
+}
+#room-name {
+  font-size: 125%;
+  color: rgb(255, 246, 246);
+}
+
+/* Join Page */
+.join-container {
+  max-width: 500px;
+  margin: 80px auto;
+  color: #fff;
+}
+
+.join-header {
+  text-align: center;
+  padding: 20px;
+  background: var(--dark-color-a);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.join-main {
+  padding: 30px 40px;
+  background: var(--dark-color-b);
+}
+
+.join-main p {
+  margin-bottom: 20px;
+}
+
+.join-main .form-control {
+  margin-bottom: 20px;
+}
+
+.join-main label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.join-main input[type="text"] {
+  font-size: 16px;
+  padding: 5px;
+  height: 40px;
+  width: 100%;
+}
+
+.join-main select {
+  font-size: 16px;
+  padding: 5px;
+  height: 40px;
+  width: 100%;
+}
+
+.join-main .btn {
+  margin-top: 20px;
+  width: 100%;
+}
+
+@media (max-width: 700px) {
+  .chat-main {
+    display: block;
+  }
+
+  .chat-sidebar {
+    display: none;
+  }
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+    <script src="js/states.json" type="text/javascript"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <nav class="navbar">
+        <div class="leftnav">
+          <ul class="navlist">
+            <li><a href="#About">About</a></li>
+            <li><a href="#Contact">Contact</a></li>
+            <li><a href="#Home">Home</a></li>
+          </ul>
+        </div>
+        <div class="rightnav">
+          <a href="#Stories"><button class="stories">Stories</button></a>
+        </div>
+      </nav>
+      <div class="chat-form">
+        <h1>Helping Hands</h1>
+
+        <form action="chat.html">
+          <p>User Name</p>
+          <input
+            name="username"
+            type="text"
+            placeholder="Enter Your Username"
+            required="true"
+          />
+          <br />
+          <p>Select Your State</p>
+          <select
+            name="state"
+            class="select"
+            id="states"
+            onchange="get_cities()"
+            required="true"
+          ></select>
+          <p>Select Your City</p>
+          <select
+            required="true"
+            name="city"
+            class="select"
+            id="cities"
+          ></select>
+          <br />
+          <button type="submit" class="chat-btn">Join Chat</button>
+        </form>
+        <img src="images/msg.png" alt="message" class="msg" />
+      </div>
+    </div>
+    <script src="js/get_states.js" type="text/javascript"></script>
+  </body>
+</html>
